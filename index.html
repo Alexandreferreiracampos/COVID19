@@ -5,37 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Covid</title>
+    
   </head>
   <body>
-    <h2>Covid 19</h2>
-
+    <div class="ContaniterTitle">
+      <h2>Covid 19</h2>
+      <img src="imagem.png" class="imgCovid" alt="Covid">
+    </div>
+  
     <div class="container">
-      <h4>Casos registrados no Mato Grosso</h4>
+      <h4 class="Uf" id="Uf">Estado</h4>
       
-      <h1 class="balance">6005</h1>
+      <h1 class="casos" id="Casos">Casos registrados:</h1>
 
       <div class="container-casos">
         <div>
           <h4>Mortes</h4>
-          <p class="Text Mortes">100</p>
+          <p class="Text Mortes" id="Mortes">0</p>
         </div>
 
         <div>
           <h4>Suspeitos</h4>
-          <p class="Text Suspeitos">20</p>
+          <p class="Text Suspeitos" id="Suspeitos">0</p>
         </div>
       </div>
 
+      <div class="container-all-casos">
+    
+        <ul id="myList" >
+        </ul>
+
+      </div>
+
+
       <h3>Consultar casos de Covid 19</h3>
-      
       
       <form id="consulta">
         <div class="consulta-control">
           <label for="text">Estados</label>
-          <input autofocus type="text" id="text" placeholder="Estado" />
+          <input autofocus type="text" id="name" name="name" placeholder="Estado"> 
         </div>
 
-        <button class="btn">Consultar</button>
+        <button type="button" class="btn" onclick="Consultar()">Consultar</button>
       </form>
     </div>
 
