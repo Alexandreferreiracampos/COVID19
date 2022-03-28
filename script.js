@@ -13,7 +13,6 @@ const consultarApi=()=>{
     req.open('GET', "https://covid19-brazil-api.now.sh/api/report/v1/", false)
     req.send()
     value = req.responseText
-   
     data = JSON.parse(value)
     let list = document.getElementById("myList");
     data.data.forEach((item) => {
@@ -30,13 +29,18 @@ function atualizarDados(){
     document.getElementById("Mortes").textContent=data.deaths;
     document.getElementById("Suspeitos").textContent=data.suspects;
     document.getElementById("Uf").textContent=data.state;
- 
+    dataupdate = data.datetime.split('T')
+    document.getElementById("data").textContent=dataupdate;
 }
 
+$(document).ready(function() {
+    $('#estado').select2();
+});
+
 function Consultar(){
-   var input = document.querySelector("#name");
-   var valor = input.value;
-   consultApiUf(valor)
+    var select = document.getElementById('estado');
+	var value = select.options[select.selectedIndex].value;
+	consultApiUf(value);
 }
 
 

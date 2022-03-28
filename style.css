@@ -76,6 +76,12 @@ h4 {
 
 }
 
+.titlecasosBR{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #myList{
   height:120px;
   width:104%;
@@ -84,6 +90,11 @@ h4 {
 }
 #myList{
   overflow:hidden; overflow-y:scroll;
+}
+
+li{
+  border-bottom: 1px solid #969595;
+  margin-bottom: 5px;
 }
  
 
@@ -117,7 +128,7 @@ label {
   margin: 10px 0;
 }
 
-input[type='text'] {
+select{
   border: 1px solid #dedede;
   border-radius: 2px;
   display: block;
